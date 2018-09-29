@@ -8,6 +8,9 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.1.2",
+    "appcenter": "^1.8.1",
+    "appcenter-analytics": "^1.8.1",
+    "appcenter-crashes": "^1.8.1",
     "react": "16.5.0",
     "react-native": "0.57.1"
   },
@@ -18,6 +21,11 @@
     "react-test-renderer": "^16.5.0"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "setupFiles": [
+      "<rootDir>/node_modules/appcenter/test/AppCenterMock.js",
+      "<rootDir>/node_modules/appcenter-analytics/test/AppCenterAnalyticsMock.js",
+      "<rootDir>/node_modules/appcenter-crashes/test/AppCenterCrashesMock.js"
+    ]
   }
 }
